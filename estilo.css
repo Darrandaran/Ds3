@@ -1,0 +1,27 @@
+h1{
+    color: rgb(0, 0, 255);
+    text-align: center;
+}
+p{
+    text-align: center;
+    padding: 20px;
+}
+.imagensacao{
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+}
+.imagensacao2{
+    display: flex;
+    justify-content: center;
+    height: 200px;
+    width: 200px;
+    margin: 0 auto;
+    padding: 50px;
+}
+b{
+    color: red;
+}
+li a{
+    font-style: oblique;
+}
