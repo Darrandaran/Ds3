@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular desconto - Aluno</title>
+</head>
+<body>
+    <h1> VALOR/ DESCONTO</h1>
+   
+    <div>
+        <label for="notas">Insira os valores (separadas por vírgula):</label>
+        <input type="text" id="notasInput">
+        <button onclick="calculardesconto()">Calcular desconto</button>
+    </div>
+
+    <div id="resultado"></div>
+
+    <script>
+        function calculardesconto() {
+            var notasInput = document.getElementById('notasInput').value;
+            var notas = notasInput.split(',').map(Number);
+
+            if (notas.length === 0 || isNaN(notas[0])) {
+                document.getElementById('resultado').innerText =
+                "Por favor, insira notas válidas.";
+                return;
+            }
+
+            var soma = notas.reduce(function (total, nota) {
+                return total + nota;
+            }, 0);
+           
+            if(soma>200){
+
+             var desconto = soma*0.10;
+            var total = soma-desconto;
+                   
+            document.getElementById('resultado').innerText =
+             "valor total a pagar: " + total.toFixed(2);
+            }
+            else{
+                document.getElementById('resultado').innerText =
+             "valor total a pagar: " + soma.toFixed(2);
+            }
+        }
+    </script>
+
+
+
+</body>
+</html>
